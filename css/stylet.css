@@ -6,7 +6,7 @@
   --color-secundario: #a03c59;     /* Variación más oscura del primario */
   --color-azul: #010310;           /* Azul oscuro usado para fondo del top bar y footer */
   --color-celeste: #6098c6;        /* Azul claro para acentos visuales */
-  --color-fondo: #ffffff;          /* Fondo blanco principal */
+  --color-fondo: #71a6c9;          /* Fondo azul principal */
   --color-texto: #000000;          /* Texto negro por defecto */
   --bs-primary: #ffffff;           /* Color blanco como valor base (opcional para Bootstrap) */
 }
