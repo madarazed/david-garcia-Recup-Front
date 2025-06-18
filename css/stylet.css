@@ -4,7 +4,7 @@
 :root {
   --color-primario: #b94866;       /* Rosa fuerte para elementos destacados */
   --color-secundario: #a03c59;     /* Variación más oscura del primario */
-  --color-azul: #010310;           /* Azul oscuro usado para fondo del top bar y footer */
+  --color-azul: #122cd2;           /* Azul oscuro usado para fondo del top bar y footer */
   --color-celeste: #45749b;        /* Azul claro para acentos visuales */
   --color-fondo: #f0f0f0;          /* Fondo blanco nuevamente principal */
   --color-texto: #340851;          /* Texto violeta*/
