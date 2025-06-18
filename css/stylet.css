@@ -1,0 +1,205 @@
+/* ============================= */
+/* VARIABLES GLOBALES DE COLOR  */
+/* ============================= */
+:root {
+  --color-primario: #b94866;       /* Rosa fuerte para elementos destacados */
+  --color-secundario: #a03c59;     /* Variación más oscura del primario */
+  --color-azul: #0b2e59;           /* Azul oscuro usado para fondo del top bar y footer */
+  --color-celeste: #a8d0f0;        /* Azul claro para acentos visuales */
+  --color-fondo: #ffffff;          /* Fondo blanco principal */
+  --color-texto: #000000;          /* Texto negro por defecto */
+  --bs-primary: #ffffff;           /* Color blanco como valor base (opcional para Bootstrap) */
+}
+
+/* ============================= */
+/* RESET GENERAL DEL BODY       */
+/* ============================= */
+body {
+  margin: 0; /* Elimina márgenes por defecto del navegador */
+  padding: 0; /* Elimina padding por defecto del navegador */
+  background-color: var(--color-fondo); /* Fondo blanco */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía base */
+  color: var(--color-texto); /* Color de texto negro por defecto */
+}
+
+/* ============================= */
+/* TOP BAR PERSONALIZADA        */
+/* ============================= */
+.custom-top-bar {
+  height: px; /* ❌ Falta definir altura, deberías asignar un valor como `50px` */
+  background-color: var(--color-celeste); /* Fondo azul celeste*/
+  font-size: 0.90rem; /* Tamaño de fuente un poco más pequeño que el normal */
+  padding: 0 2rem; /* Espaciado horizontal a los lados */
+  display: flex; /* Usa Flexbox para alinear contenido */
+  justify-content: space-between; /* Alinea contenido a los extremos (izquierda y derecha) */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+/* Izquierda: Redes sociales */
+.custom-top-bar .left-side {
+  color: white; /* Texto blanco */
+  display: flex; /* Flex para alinear iconos o enlaces en fila */
+  align-items: center; /* Centrado vertical */
+  gap: 0.5rem; /* Espacio entre los elementos */
+}
+
+.custom-top-bar .left-side a {
+  color: white; /* Enlaces en blanco */
+  text-decoration: none; /* Elimina subrayado */
+  transition: color 0.3s ease; /* Transición suave en hover */
+}
+
+.custom-top-bar .left-side a:hover {
+  color: #ffd6e1; /* Cambia a un rosa claro al pasar el mouse */
+}
+
+/* Derecha: Contacto con forma diagonal */
+.custom-top-bar .right-side {
+  background-color: var(--color-azul); /* Fondo rosado     */
+  padding: 0 1.5rem; /* Espaciado lateral interno */
+  height: 100%; /* Ocupa toda la altura del contenedor padre */
+  display: flex; /* Flex para centrar contenido */
+  align-items: center; /* Centrado vertical */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%); /* Crea forma diagonal (trapezoidal) */
+}
+
+/* ============================= */
+/* HEADER - LOGO EN POLÍGONO    */
+/* ============================= */
+.logo-box {
+  background-color: var(--color-azul); /* Fondo azul      */
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); /* Forma en ángulo del contenedor */
+  padding: 0.5rem 1.5rem; /* Espaciado interno */
+}
+
+.logo-img {
+  height: 50px; /* Altura fija para el logo */
+}
+
+.header-bar {
+  background-color: var(--color-celeste); /*color del header*/
+  display: flex; /* Flexbox para alinear logo y navbar */
+  flex-wrap: nowrap; /* No permite que los hijos se bajen a otra línea */
+  align-items: center; /* Alinea verticalmente los hijos */
+}
+
+/* ============================= */
+/* NAVBAR PRINCIPAL             */
+/* ============================= */
+.navbar-nav .nav-link {
+  color: #333; /* Gris oscuro para los enlaces */
+  font-weight: 500; /* Peso de fuente medio */
+  padding: 0.5rem 1rem; /* Espaciado interno para cada enlace */
+  transition: color 0.3s ease; /* Suaviza cambio de color en hover */
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-primario); /* Rosa fuerte al pasar el mouse */
+}
+
+.navbar .btn {
+  font-weight: bold; /* Hace el botón más visible con negrita */
+}
+
+/* ============================= */
+/* SECCIÓN HERO (BIENVENIDA)    */
+/* ============================= */
+.hero {
+  background-image: url('../img/babyhero.png'); /* Imagen de fondo */
+  background-size: cover; /* Cubre todo el contenedor sin perder proporción */
+  background-position: center; /* Centra la imagen */
+  height: calc(100vh - 120px); /* Altura dinámica según la pantalla, menos 120px (ej. header) */
+  display: flex; /* Flex para centrar contenido */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  text-align: center; /* Centra el texto dentro del contenido */
+  position: relative; /* Necesario para posicionar ::before correctamente */
+}
+
+.hero::before {
+  content: ""; /* Crea un pseudo-elemento para efectos como sombreado */
+  position: absolute; /* Posición absoluta dentro de `.hero` */
+  inset: 0; /* Ocupa todo el espacio (top: 0, bottom: 0, etc.) */
+}
+
+.hero-content {
+  position: relative; /* Permite estar por encima del pseudo-elemento */
+  z-index: 1; /* Prioridad para estar al frente */
+}
+
+.hero p.subtitulo {
+  font-size: 1rem; /* Tamaño de fuente moderado */
+  font-weight: 600; /* Seminegrita */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-transform: uppercase; /* Convierte texto en mayúsculas */
+  margin-bottom: 0.5rem; /* Separación inferior */
+}
+
+.hero h1 {
+  font-size: 3rem; /* Título grande */
+  font-weight: bold; /* Negrita */
+  margin-bottom: 1.5rem; /* Espacio debajo del título */
+}
+
+/* ============================= */
+/* BOTÓN PERSONALIZADO AMARILLO */
+/* ============================= */
+.btn-yellow {
+  background-color: #ffc107; /* Amarillo vibrante */
+  border: none; /* Sin borde */
+  color: black; /* Texto negro */
+  padding: 0.6rem 1.5rem; /* Tamaño interno del botón */
+  font-weight: bold; /* Negrita */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Elimina subrayado en enlaces */
+  transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.btn-yellow:hover {
+  background-color: #e0a800; /* Amarillo más oscuro al pasar el mouse */
+}
+
+/* ============================= */
+/* FOOTER                       */
+/* ============================= */
+footer {
+  background-color: var(--color-azul); /* Azul oscuro de fondo */
+  text-align: center; /* Centra todo el texto */
+  color: white; /* Texto blanco */
+  padding: 1rem 0; /* Espaciado vertical */
+  font-size: 0.85rem; /* Tamaño de fuente reducido */
+}
+
+/* ============================= */
+/* ICONOS DE REDES (FOOTER)     */
+/* ============================= */
+.social-icons i {
+  font-size: 1.5rem; /* Tamaño grande para los íconos */
+  margin: 0 0.5rem; /* Separación horizontal entre íconos */
+  color: var(--color-primario); /* Rosa fuerte */
+  transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.social-icons i:hover {
+  color: var(--color-secundario); /* Cambia a rosa más oscuro al pasar el mouse */
+}
+
+/* ============================= */
+/* FORMULARIOS GENERALES        */
+/* ============================= */
+.form-label {
+  color: #ff5722; /* Naranja brillante para los labels */
+  font-size: 0.85rem; /* Tamaño pequeño */
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.form-control:focus {
+  border-color: var(--color-primario); /* Borde rosa al hacer foco */
+  box-shadow: 0 0 0 0.2rem rgba(185, 72, 102, 0.25); /* Sombra rosada tenue al enfocar */
+}
+
+button[type="submit"] {
+  text-transform: uppercase; /* Texto en mayúsculas */
+  font-weight: bold; /* Negrita */
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Indica que el idioma principal del contenido es español -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Define la codificación de caracteres para admitir acentos y símbolos especiales -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que el sitio sea responsive: adapta el contenido al ancho de la pantalla del dispositivo -->
+
+  <title>Inicio - BabyStore</title>
+  <!-- Título que se mostrará en la pestaña del navegador -->
+
+  <!-- Enlace al CSS de Bootstrap desde CDN para usar su sistema de diseño y componentes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Enlace a los íconos de Bootstrap (como teléfono, redes, etc.) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Enlace a tu hoja de estilos personalizada -->
+  <link rel="stylesheet" href="css/stylet.css">
+
+  <!-- Favicon opcional -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- ============================== -->
+  <!-- TOP BAR CON REDES Y CONTACTO -->
+  <!-- ============================== -->
+  <div class="custom-top-bar d-flex justify-content-between align-items-center">
+    <!-- Contenedor superior con fondo azul y Flexbox para distribuir redes y contacto -->
+
+    <div class="left-side d-flex align-items-center">
+      <!-- Lado izquierdo: Texto y enlaces a redes sociales -->
+      Nuestras Redes:
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-whatsapp"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+    </div>
+
+    <div class="right-side text-white">
+      <!-- Lado derecho: Teléfono de contacto -->
+      <i class="bi bi-telephone"></i> Comunícate: +57 311 222 8877
+    </div>
+  </div>
+
+  <!-- ============================== -->
+  <!-- ENCABEZADO CON LOGO Y MENÚ -->
+  <!-- ============================== -->
+  <header class="header-bar">
+    <!-- Contenedor del header con fondo blanco y elementos alineados -->
+
+    <div class="logo-box">
+      <!-- Caja con forma poligonal para mostrar el logo -->
+      <img src="img/logo.png" alt="Logo de BabyStore" class="logo-img">
+    </div>
+
+    <nav class="navbar navbar-expand-lg flex-grow-1">
+      <!-- Navbar de Bootstrap que se expande en pantallas grandes -->
+
+      <div class="container-fluid">
+        <!-- Contenedor fluido que adapta el ancho -->
+
+        <!-- Botón para mostrar/ocultar el menú en pantallas pequeñas (modo responsive) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contenedor colapsable del menú -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-3">
+            <!-- Lista del menú alineada a la derecha -->
+
+            <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+
+            <!-- Dropdown para Consultoría -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Consultoría
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">opcion 1</a></li>
+                <li><a class="dropdown-item" href="#">opcion 2</a></li>
+                <li><a class="dropdown-item" href="#">opcion 3</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Inmuebles</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Empleo</a></li>
+
+            <!-- Dropdown para Cursos -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                Cursos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">enlace1</a></li>
+                <li><a class="dropdown-item" href="#">enlace2</a></li>
+                <li><a class="dropdown-item" href="#">enlace 3</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            <li class="nav-item"><a class="btn btn-outline-danger" href="login.html">Ingresar</a></li>
+            <!-- Botón de acceso/login con estilo Bootstrap -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================== -->
+  <!-- SECCIÓN HERO O PRINCIPAL -->
+  <!-- ============================== -->
+  <section class="hero">
+    <!-- Sección con imagen de fondo definida en CSS -->
+
+    <div class="container text-start text-white">
+      <!-- Contenedor del texto, alineado a la izquierda y con texto blanco -->
+
+      <p class="text-uppercase fw-bold">Proyectos de Topografía</p>
+      <!-- Subtítulo en mayúsculas y negrita -->
+
+      <h1 class="display-4 fw-bold">Servicios y Consultoría</h1>
+      <!-- Título principal grande y en negrita -->
+
+      <a href="#" class="btn btn-warning fw-bold mt-3">Ver más</a>
+      <!-- Botón amarillo de llamada a la acción -->
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- SCRIPTS DE BOOTSTRAP -->
+  <!-- ============================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script necesario para los dropdowns, navbar colapsable y demás componentes de Bootstrap -->
+
+</body>
+
+</html>
